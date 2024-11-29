@@ -1,0 +1,9 @@
+def ost(a, b):
+    if a < b:
+        return a
+    else:
+        return ost(a - b, b)
+a=int(input())
+b=int(input())
+res=ost(a,b)
+print('остаток равен',res)
