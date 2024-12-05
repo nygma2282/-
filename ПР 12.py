@@ -11,7 +11,7 @@ root.geometry('400x400')
 
 def Give_to_file():
     usname = Entry_user.get() 
-    url = f'github.com/openshift/origin'
+    url = f'https://api.github.com/users/kubernetes'
 
     user_data = requests.get(url).json()
     need_keys = ['company', 'created_at', 'email', 'id', 'name', 'url']
@@ -20,7 +20,7 @@ def Give_to_file():
 
     for i in need_keys:
         data[i] = user_data.get(i) 
-        with open('C://Users/User/Desktop/vvod.txt', 'w') as file:
+        with open('C://Users/overw/OneDrive/Рабочий стол/vvod.txt', 'w') as file:
             file.write(json.dumps(data, indent = 4))
 
 lbl = Label(text='Введите Имя Пользователя: ')
