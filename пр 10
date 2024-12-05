@@ -1,0 +1,19 @@
+n=5
+a=[]
+with open("vvod") as file:
+    for line in file:
+        arr = [int(b.strip()) for b in line.split()]
+        a.append(arr)
+for i in a:
+    print(*i)
+for i in range(n):
+    a[i][0], a[i][-1] = a[i][-1], a[i][0]
+print("_" * 10)
+for i in a:
+    print(*i)
+with open('vivod', 'w') as file_v:
+    for row in a:
+        file_v.write(" ".join(map(str, row)) + "\n")
+with open('vivod') as file_v:
+    for line in file_v:
+        print(line.strip())
